@@ -1,0 +1,142 @@
+.container {
+	max-width: 1220px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	max-width: $breakpoint-large;
+	margin: 0 auto;
+    background-image: url("background.jpg");
+    
+}
+
+.col-3, .col-4 {
+    padding: 5%;
+}
+
+//.col-container {
+//    outline: 1px solid red;
+//    @extend .clearfix;
+//}
+
+.iconic, .btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+.btn {
+    border-radius: 10px;
+    background-color: #c4c7ce;
+    color: black;
+}
+
+
+.iconic {
+    fill: #B7FF4D;
+}
+
+// animation
+//.box p, .btn{
+//    text-align: center;
+//  -webkit-animation-name: fade-in;
+//  -webkit-animation-duration: 2s;
+//  -webkit-animation-delay: 2s;
+//  -webkit-animation-timing-function: ease-in;
+//  -webkit-animation-fill-mode: forwards;
+//}
+//
+//h3, h4{
+//    text-align: center;
+//  -webkit-animation-name: fade-in;
+//  -webkit-animation-duration: 1s;
+//  -webkit-animation-delay: 1s;
+//  -webkit-animation-timing-function: ease-in;
+//  -webkit-animation-fill-mode: forwards;
+//}
+//
+//
+//
+//
+//@-webkit-keyframes fade-in {
+//  0%   { opacity: 0 }
+//  100% { opacity: 1 }
+//}
+
+
+@media only screen and (min-width: $breakpoint-small) {
+    
+    .wrapper {
+	max-width: $breakpoint-small;
+	margin: 0 auto;
+}
+    
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+    
+.col-3 {
+//    background: yellow;
+padding: 1%;
+    margin-bottom: 10px;
+//    outline: 1px solid black;
+    @include equalSpaced(3, 10px, $breakpoint-small );
+    height: 300px;
+    float: left;
+    overflow: scroll;
+    
+}
+
+.col-4 {
+//    background: yellow;
+//    outline: 1px solid black;
+  padding: 1%;  
+    @include equalSpaced(4, 10px, $breakpoint-small );
+   height: 300px;
+    float: left;
+    overflow: scroll;
+    
+}
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+    
+    .wrapper {
+	max-width: $breakpoint-large;
+	margin: 0 auto;     
+    }
+    
+    .btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    
+}
+    
+.col-3 {
+//    background: yellow;
+    padding: 1%;
+    margin-bottom: 10px;
+//    outline: 1px solid black;
+    @include equalSpaced(3, 20px, $breakpoint-large );
+    height: 330px;
+    float: left;
+    
+}
+
+.col-4 {
+    padding: 1%;
+//    background: yellow;
+ //   outline: 1px solid black;
+    @include equalSpaced(4, 15px, $breakpoint-large );
+   height: 300px;
+    float: left;
+    
+}
+}
